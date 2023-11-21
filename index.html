@@ -4,46 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <style>
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-    </style>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
 
-<h2>Registration Form</h2>
+<div class="max-w-md w-full p-6 bg-white rounded-md shadow-md">
 
-<form id="registrationForm" onsubmit="submitForm(event)">
-    <label for="username">Username:</label>
-    <input type="text" id="username" required>
+    <h2 class="text-2xl font-semibold mb-4">Registration Form</h2>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+    <form id="registrationForm" onsubmit="submitForm(event)">
+        <label class="block mb-2" for="username">Username:</label>
+        <input class="w-full p-2 border rounded-md" type="text" id="username" required>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
+        <label class="block mb-2" for="email">Email:</label>
+        <input class="w-full p-2 border rounded-md" type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
 
-    <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" required>
+        <label class="block mb-2" for="password">Password:</label>
+        <input class="w-full p-2 border rounded-md" type="password" id="password" required>
 
-    <label for="termsCheckbox">Accept Terms and Conditions:</label>
-    <input type="checkbox" id="termsCheckbox" required>
+        <label class="block mb-2" for="dob">Date of Birth:</label>
+        <input class="w-full p-2 border rounded-md" type="date" id="dob" required>
 
-    <button type="submit">Submit</button>
-</form>
 
-<table id="userTable" border="1">
-    <tr>
-        <th>Username</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Date of Birth</th>
-    </tr>
-</table>
+        <label class="block mb-2" for="termsCheckbox">Accept Terms and Conditions:</label>
+        <input type="checkbox" id="termsCheckbox" required>
 
-<script src="index.js"></script>
+        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md mt-4">Submit</button>
+    </form>
+
+    <table id="userTable" class="mt-8 w-full border-collapse border border-gray-400">
+        <tr class="bg-gray-200">
+            <th class="p-2 border">Username</th>
+            <th class="p-2 border">Email</th>
+            <th class="p-2 border">Password</th>
+            <th class="p-2 border">Date of Birth</th>
+            <th class="p-2 border">Accept Terms</th>
+        </tr>
+    </table>
+
+</div>
+
+<script src="index.js">
+    
+</script>
 
 </body>
 </html>
