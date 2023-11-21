@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm" onsubmit="submitForm(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required>
+
+    <label for="termsCheckbox">Accept Terms and Conditions:</label>
+    <input type="checkbox" id="termsCheckbox" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+<table id="userTable" border="1">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Date of Birth</th>
+    </tr>
+</table>
+
+<script src="index.js"></script>
+
+</body>
+</html>
